@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ClimaGuard</title>
+    <link rel="stylesheet" href="{% static 'mainapp/css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'home' %}" class="logo">
+                <span>ClimaGuard</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="{% url 'home' %}#solution">Solution</a></li>
+                <li><a href="{% url 'home' %}#technology">Technology</a></li>
+                <li><a href="{% url 'about' %}" class="active">About</a></li>
+                <li><a href="{% url 'data_search' %}">Data Portal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section class="about-section">
+    <div class="container">
+        <h2 class="section-title">Our Dedicated Team</h2>
+        <p class="section-subtitle">Driving innovation in environmental monitoring</p>
+        
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{% static 'mainapp/images/elina.png' %}" alt="Tarush Agarwal">
+                </div>
+                <h3 class="member-name">Elina Jain</h3>
+                <p class="member-role">ML Engineer</p>
+                <p class="member-bio">Implemented anomaly detection in the machine learning model using Random Forest and Isolation Forest algorithms.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{% static 'mainapp/images/Gaurav.jpg' %}" alt="Ishanvi Mishra">
+                </div>
+                <h3 class="member-name">Gaurav Mehta</h3>
+                <p class="member-role">Full Stack &amp; ML Engineer</p>
+                <p class="member-bio">Designed the website and implemented K-Means clustering in the machine learning model.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-researchgate"></i></a>
+                    <a href="#"><i class="fas fa-file-pdf"></i></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{% static 'mainapp/images/Vanshika.jpg' %}" alt="Ansh Chaturvedi">
+                </div>
+                <h3 class="member-name">Vanshika Rajput</h3>
+                <p class="member-role">ML Engineer</p>
+                <p class="member-bio">Vanshika developed the machine learning model using the LSTM algorithm.</p>
+                <div class="social-links">
+                <a href="#"><i class="fab fa-stack-overflow"></i></a>
+                <a href="#"><i class="fab fa-dev"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    {% comment %} Footer Section {% endcomment %}
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    {% comment %} <img src="{% static 'images/logo-white.svg' %}" alt="SatIndustry Logo"> {% endcomment %}
+                    <span class="logo">ClimaGuard</span>
+                    <p>Making Earth Observation Actionable</p>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="link-group">
+                    <h4>Solutions</h4>
+                    <a href="#solution">Emission Tracking</a>
+                    <a href="#technology">Technology</a>
+                    <a href="#about">About</a>
+                </div>
+    
+                <!-- Newsletter -->
+                <div class="link-group">
+                    <h4>Stay Updated</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>© 2025 ClimaGuard. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
